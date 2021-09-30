@@ -22,6 +22,11 @@ namespace FluidHTN
         List<ICondition> Conditions { get; }
 
         /// <summary>
+        ///     Last status returned by Update
+        /// </summary>
+        TaskStatus LastStatus { get; }
+
+        /// <summary>
         ///     Add a new condition to the task.
         /// </summary>
         /// <param name="condition"></param>

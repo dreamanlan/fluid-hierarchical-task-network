@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fluid-HTN\Fluid-HTN.csproj">
-      <Project>{B6908CED-5C0B-415C-9564-85F66A8B5025}</Project>
+      <Project>{b6908ced-5c0b-415c-9564-85f66a8b5025}</Project>
       <Name>Fluid-HTN</Name>
     </ProjectReference>
   </ItemGroup>

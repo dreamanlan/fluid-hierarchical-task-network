@@ -159,13 +159,16 @@ namespace FluidHTN
             var isMTRsEqual = ctx.MethodTraversalRecord.Count == ctx.LastMTR.Count;
             if (isMTRsEqual)
             {
-                for (var i = 0; i < ctx.MethodTraversalRecord.Count; i++)
-                    if (ctx.MethodTraversalRecord[i] < ctx.LastMTR[i])
-                    {
-                        isMTRsEqual = false;
-                        break;
-                    }
-
+                if (ctx.MethodTraversalRecord.Count <= 0) {
+                    isMTRsEqual = false;
+                }
+                else {
+                    for (var i = 0; i < ctx.MethodTraversalRecord.Count; i++)
+                        if (ctx.MethodTraversalRecord[i] < ctx.LastMTR[i]) {
+                            isMTRsEqual = false;
+                            break;
+                        }
+                }
                 if (isMTRsEqual)
                 {
                     plan = null;

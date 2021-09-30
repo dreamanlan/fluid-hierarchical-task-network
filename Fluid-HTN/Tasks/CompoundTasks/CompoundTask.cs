@@ -11,6 +11,7 @@ namespace FluidHTN.Compounds
         public string Name { get; set; }
         public ICompoundTask Parent { get; set; }
         public List<ICondition> Conditions { get; } = new List<ICondition>();
+        public TaskStatus LastStatus { get; private set; }
         public List<ITask> Subtasks { get; } = new List<ITask>();
 
         // ========================================================= VALIDITY
