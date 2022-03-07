@@ -103,6 +103,14 @@ namespace FluidHTN
             bool isTryingToReplacePlan = false;
             // Check whether state has changed or the current plan has finished running.
             // and if so, try to find a new plan.
+            if (_currentTask == null && _plan.Count == 0)
+            {
+                ctx.LastMTR.Clear();
+                if (ctx.DebugMTR)
+                {
+                    ctx.LastMTRDebug.Clear();
+                }
+            }
             if (_currentTask == null && (_plan.Count == 0) || ctx.IsDirty)
             {
                 Queue<PartialPlanEntry> lastPartialPlanQueue = null;
